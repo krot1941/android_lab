@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Любовный дневник</string>
+    <string name="home_frg_self_name">Self name</string>
+    <string name="home_frg_and">&amp;</string>
+    <string name="home_frg_partner_name">Partner name</string>
+
+    <string-array name="time_range">
+        <item>неделю</item>
+        <item>месяц</item>
+        <item>квартал</item>
+        <item>год</item>
+    </string-array>
+
+</resources>

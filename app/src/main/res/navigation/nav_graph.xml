@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.loversdiary.ui.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/splash_fragment">
+        <action
+            android:id="@+id/action_splashFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.loversdiary.ui.home.HomeFragment"
+        android:label="Любовный дневник"
+        tools:layout="@layout/home_fragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.example.loversdiary.ui.boarding.ViewPagerFragment"
+        android:label="ViewPagerFragment"
+        tools:layout="@layout/view_pager_fragment">
+        <action
+            android:id="@+id/action_viewPagerFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/viewPagerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.loversdiary.ui.settings.SettingsFragment"
+        android:label="Настройки"
+        tools:layout="@layout/settings_fragment"/>
+    <fragment
+        android:id="@+id/momentsListFragment"
+        android:name="com.example.loversdiary.ui.momentslist.MomentsListFragment"
+        android:label="Моменты"
+        tools:layout="@layout/moments_list_fragment" >
+        <action
+            android:id="@+id/action_momentsListFragment_to_addEditMomentFragment"
+            app:destination="@id/addEditMomentFragment" />
+        <action
+            android:id="@+id/action_momentsListFragment_to_statisticFragment"
+            app:destination="@id/statisticFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/addEditMomentFragment"
+        android:name="com.example.loversdiary.ui.addeditmoment.AddEditMomentFragment"
+        android:label="{fragment_title}"
+        tools:layout="@layout/add_edit_moment_fragment">
+        <argument
+            android:name="moment"
+            app:argType="com.example.loversdiary.data.Moment"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="event"
+            app:argType="com.example.loversdiary.data.Event"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="fragment_title"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/statisticFragment"
+        android:name="com.example.loversdiary.ui.statistic.StatisticFragment"
+        android:label="Статистика"
+        tools:layout="@layout/statistic_fragment" />
+</navigation>

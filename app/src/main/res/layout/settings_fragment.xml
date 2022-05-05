@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/settingsFrgText1View"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Свое имя:"
+                android:layout_marginEnd="10dp"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/settingsFrgSelfNameView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Self name"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/settingsFrgText2View"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="Имя партнера:"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/settingsFrgPartnerNameView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Partner name"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/settingsFrgText3View"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="Дата начала отношений:"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/settingsFrgDateView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="dd MMMM yyyy"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_baseline_done_24"
+        app:backgroundTint="@color/purple_500" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

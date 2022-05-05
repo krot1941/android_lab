@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_redirect_to_settings"
+        android:title="Настройки" />
+
+    <item
+        android:id="@+id/action_add_photo"
+        android:title="Добавить фото" />
+
+</menu>
